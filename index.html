@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark"> -->
-    <title>News Letter Email</title>
+    <title>Promo Email Design</title>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
         /* :root {
             color-scheme: light dark;
             supported-color-schemes: light dark;
@@ -19,6 +18,7 @@
         /*Margin: 0; allows no spacing at the top or bottom of the email */
         body {
             margin: 0;
+            background-color: #000;
             /* background: #2d2d2d !important;
             color: #f0f0f0 !important; */
         }
@@ -39,7 +39,7 @@
         .wrapper {
             /* width 100% keeps the tables within the design no matter the screen size */
             width: 100%;
-            background-color: #e5dec7;
+            background-color: #000;
             /* fixed makes sure the table layout doesnt display out of parent elements or the center tag */
             table-layout: fixed;
             /* gives spacing tot he bottom of the email template */
@@ -53,15 +53,38 @@
             margin: 0 auto;
             /* Makes sure the element takes up 100% of the width of the outer parent element */
             width: 100%;
-            /* Re-enforce the max width similar to the outer class */
+            /* Re-enforce the max width */
             max-width: 600px;
             background-color: #ffffff;
-            font-family: sans-serif;
+            border-spacing: 0;
             color: #4a4a4a;
-            /* Gives the email a box shadow effect on the background helping it to stand out more */
-            box-shadow: 0 0 25px rgba(0, 0, 0, .15);
-            /* Adding text-align: center; in the main class will center all text on the email design */
+        }
+
+        .two-columns {
+            /* This will center the two elements making them responsive to smaller screen size*/
             text-align: center;
+            /* Email clients like to add font-size to links which creates extra spacing in order to remove that you must make it 0 */
+            font-size: 0;
+            padding: 40px 0;
+        }
+
+        .two-columns .column {
+            width: 100%;
+            max-width: 300px;
+            display: inline-block;
+            /* In order to make the elements responsive in email clients and stack at a certain screen width */
+            vertical-align: top;
+            text-align: center;
+            font-size: 18px;
+            padding-bottom: 40px;
+        }
+
+        .btn {
+            background-color: #464646;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 2.5px;
         }
 
         @media only screen and (max-width: 600px) {}
@@ -69,14 +92,138 @@
         @media only screen and (max-width: 400px) {}
     </style>
 </head>
+
 <body>
     <div style="display: none; max-height: 0px; overflow: hidden;">
         <!-- Preheader message here -->
     </div>
+    <!-- Center tag makes sure the email is centered in email clients -->
+    <center class="wrapper">
 
-    <center>
-        <table>
+        <table class="main" width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
 
-        </table>
+            <!-- Brown Border -->
+            <tr>
+                <td height="8px" style="background-color: #b8714e;">
+                </td>
+            </tr>
+
+            <!-- Logo -->
+
+            <tr>
+                <td style="text-align: center; padding: 15px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+
+                        <tr>
+                            <td>
+                                <a href="https://github.com/Goshufit">
+                                    <img src="https://i.ibb.co/gr7P33h/apparel.png" alt="logo" width="180px">
+                                </a>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Banner Image -->
+
+            <tr>
+                <td>
+                    <a href="https://github.com/Goshufit"><img src="https://i.ibb.co/C06n4w2/banner.jpg" alt="banner"
+                            width="600px" style="max-width: 100%;"></a>
+                </td>
+            </tr>
+
+            <!-- Section Break -->
+
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+
+                        <tr>
+                            <td style="text-align: center; font-size: 25px; background-color: #b8714e; color: #ffffff;">
+
+                                <p>SHOP OUR LATEST DEALS</p>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Two Column Section -->
+
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+
+                        <tr>
+                            <td class="two-columns">
+
+                                <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0"
+                                    role="presentation">
+
+                                    <tr>
+                                        <td>
+
+                                            <a href="https://github.com/Goshufit"><img
+                                                    src="https://i.ibb.co/1smR5qd/women.jpg" alt="Woman" width="300px"
+                                                    style="max-width: 300px; padding-bottom: 40px;">
+                                            </a>
+                                            <a href="https://github.com/Goshufit" class="btn">SHOP WOMENS</a>
+
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                                <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0"
+                                    role="presentation">
+
+                                    <tr>
+                                        <td>
+
+                                            <a href="https://github.com/Goshufit"><img
+                                                    src="https://i.ibb.co/hWn0mQh/men.jpg" alt="Man" width="300px"
+                                                    style="max-width: 300px; padding-bottom: 40px;">
+                                            </a>
+                                            <a href="https://github.com/Goshufit" class="btn">SHOP MENS</a>
+
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Footer Section -->
+
+            <tr>
+                <td style="background-color: #efefef; text-align: center;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                    role="presentation">
+                        <tr>
+                            <td height="3px" style="background-color: #969696;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 22px;">
+                                <p>NEW ARRIVALS</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </table><!-- Bottom of main table -->
     </center>
 </body>
